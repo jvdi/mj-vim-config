@@ -1,8 +1,20 @@
 "####Vim config####"
-set nu "show  line number
+set t_Co=256 "makes Vim use 256 colors
+
+set nu "show line number
+
+set autoindent "automatic indentation
+set si "smart indent
+set cindent "turns on C style indentation
+
+set showmatch "show matching brackets
+
+set hlsearch "highlight in search
+
+set pastetoggle=<C-p> "paste mode toggle
 
 syntax enable "enable color sheme code
-set termguicolors "sync colorsheme with terminal
+if(empty($TMUX)) | set termguicolors | endif "sync colorsheme with terminal
 colorscheme gruvbox "install them from AUR -> vim-gruvbox-git & vim-airline-gruvbox-git
 set bg=dark "set dark mode in gruvbox theme
 
@@ -14,11 +26,10 @@ nnoremap <C-l> :tabnext<CR>
 
 
 "####Vim plug####"
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 
 call plug#end()
