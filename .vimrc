@@ -27,7 +27,7 @@ call plug#end()
 "airline
 let g:airline_theme='gruvbox' "select them for aireline
 let g:airline#extensions#tabline#enabled = 1 "showing tabs
-"set symbols for open file tab
+"--set symbols for open file tab
 let g:airline#extensions#tabline#left_sep = '▶'
 let g:airline#extensions#tabline#left_alt_sep = '▶'
 let g:airline_powerline_fonts = 0
@@ -58,19 +58,19 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 "nerdtree
-"NERDTree shortcut toggle
+"--NERDTree shortcut toggle
 map <C-e> :NERDTreeToggle<CR>
-"open a NERDTree automatically when vim starts up if no files were specified
+"--open a NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"open NERDTree and a new edit window in folder
+"--open NERDTree and a new edit window in folder
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-"close vim if the only window left open is a NERDTree
+"--close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"close nerdree after open a file
+"--close nerdree after open a file
 let NERDTreeQuitOnOpen=1
-"NERDTress File highlighting
+"--NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
