@@ -33,6 +33,7 @@ Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'alvan/vim-closetag'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 call plug#end()
 
