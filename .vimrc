@@ -1,4 +1,6 @@
 "####Vim config####"
+set encoding=utf-8
+
 set t_Co=256 "makes Vim use 256 colors
 
 set nu "show line number
@@ -42,6 +44,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+
 
 call plug#end()
 
