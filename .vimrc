@@ -24,6 +24,14 @@ nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>                                                                            
 nnoremap <C-l> :tabnext<CR>
 
+"auto complete for ( , " , ' , [ , { 
+inoremap        (  ()<Left>
+inoremap        "  ""<Left>
+inoremap        `  ``<Left>
+inoremap        '  ''<Left>
+inoremap        [  []<Left>
+inoremap        {  {}<Left>
+
 "####Vim plug####"
 call plug#begin('~/.vim/plugged')
 
