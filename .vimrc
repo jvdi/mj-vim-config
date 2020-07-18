@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
