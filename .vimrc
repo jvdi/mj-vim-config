@@ -32,6 +32,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/AutoComplPop'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
@@ -98,3 +100,7 @@ call NERDTreeHighlightFile('htm', 'yellow', 'none', 'yellow', '#151515')
 call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
 call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+"vim-closetag
+"These are the file extensions where this plugin is enabled.
+let g:closetag_filenames = '*.html,*.htm,*.xhtml,*.phtml,*.php'
