@@ -44,6 +44,7 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 
 call plug#end()
 
