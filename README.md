@@ -9,3 +9,5 @@ Requirements :
 3.after -> clone .vimrc -> run :PlugInstall in vim for install plugin
 
 4.install theme for vim and aireline : from AUR -> vim-gruvbox-git && vim-airline-gruvbox-git
+
+5.cmake-cmake_modules-composer-php-python-npm-pip
