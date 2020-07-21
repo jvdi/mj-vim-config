@@ -45,6 +45,14 @@ Plug 'vim-scripts/AutoComplPop'
 Plug 'alvan/vim-closetag'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'} "Include phpactor
+Plug 'phpactor/ncm2-phpactor' "Require ncm2 and this plugin
 
 call plug#end()
 
@@ -115,3 +123,7 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 "vim-closetag
 "These are the file extensions where this plugin is enabled.
 let g:closetag_filenames = '*.html,*.htm,*.xhtml,*.phtml,*.php'
+
+"Php autocomplete
+autocmd BufEnter * call ncm2#enable_for_buffer() "enable ncm2 for all buffers
+set completeopt=noinsert,menuone,noselect "IMPORTANT: :help Ncm2PopupOpen for more information
