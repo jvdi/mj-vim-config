@@ -17,6 +17,7 @@ set pastetoggle=<C-p> "paste mode toggle
 
 syntax enable "enable color sheme code
 if(empty($TMUX)) | set termguicolors | endif "sync colorsheme with terminal
+"autocmd vimenter * ++nested colorscheme gruvbox
 colorscheme gruvbox "install them from AUR -> vim-gruvbox-git & vim-airline-gruvbox-git
 set bg=dark "set dark mode in gruvbox theme
 
@@ -37,9 +38,9 @@ inoremap        {  {}<Left>
 "####Vim plug####"
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'alvan/vim-closetag'
@@ -103,6 +104,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "--close nerdree after open a file
 let NERDTreeQuitOnOpen=1
+
 "--NERDTress File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
